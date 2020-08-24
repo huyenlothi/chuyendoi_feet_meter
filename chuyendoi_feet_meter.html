@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>feet-met</title>
+</head>
+<body>
+<form>
+<h2>Chuyen doi Feet - Meter</h2>
+<p> Feet
+    <input type="number" id="inputFeet" placeholder="Feet"
+    oninput="feetToMeter(this.value)">
+</p>
+<p> Meter: <span id="outputMeter"></span></p>
+<p>
+    Meter
+    <input type="number" id="inputMeter" placeholder="Meter"
+    oninput="meterToFeet(this.value)">
+</p>
+    <p> Meter: <span id="outputfeet"></span> </p>
+</form>
+<script>
+    function feetToMeter(number) {
+        number = parseFloat(number);
+        document.getElementById("outputMeter").innerHTML = 0.305*number;
+    }
+    function meterToFeet(number) {
+        number = parseFloat(number);
+        document.getElementById("outputfeet").innerHTML = 3.279*number;
+    }
+</script>
+</body>
+</html>
